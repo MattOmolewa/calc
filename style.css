@@ -6,7 +6,14 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
 body {
+  background: #eeeeee;
+  background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%);
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #eeeeee 100%);
+  background: linear-gradient(to bottom, #eeeeee 0%, #eeeeee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 );
+
   padding: 0;
   margin: 0;
   min-height: 100vh;
@@ -15,20 +22,20 @@ body {
   align-items: center;
 }
 .wrapper {
-  width: 450px;
+  width: 420px;
   border: 1px solid black;
 }
 button {
   display: inline-block;
   border: 1.5px solid black;
-  font-size: 20px;
-  padding: 2em;
+  font-size: 30px;
+  padding: 2rem;
 }
 .calc-screen {
-  padding: 1em 0;
+  padding: 1em 0.2em;
   background-color: black;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
 }
 .calc-screen div {
   text-align: end;
@@ -39,24 +46,19 @@ button {
 [class*="row"] button {
   flex: 1 0 20%;
 }
-.row-1 {
-}
-.row-1 button {
-}
-.row-1 .cancel {
+.row .cancel {
   flex: 1 0 45%;
 }
-/* .row-1 button {
-  flex: 0 0 20%;
-} */
-.row-2 {
-}
-.row-3 {
-}
-.row-4 {
-}
-.row-5 {
-}
-.row-5 .zero {
+.row .zero {
   flex: 1 0 70%;
+}
+button:hover {
+  background-color: #bbb3b3;
+}
+button:last-child {
+  background-color: #df974c;
+  color: white;
+}
+button:last-child:hover {
+  background-color: #af8e6b;
 }
