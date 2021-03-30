@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: 450px;
+  border: 1px solid black;
+}
+button {
+  display: inline-block;
+  border: 1.5px solid black;
+  font-size: 20px;
+  padding: 2em;
+}
+.calc-screen {
+  padding: 1em 0;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+.calc-screen div {
+  text-align: end;
+}
+[class*="row"] {
+  display: flex;
+}
+[class*="row"] button {
+  flex: 1 0 20%;
+}
+.row-1 {
+}
+.row-1 button {
+}
+.row-1 .cancel {
+  flex: 1 0 45%;
+}
+/* .row-1 button {
+  flex: 0 0 20%;
+} */
+.row-2 {
+}
+.row-3 {
+}
+.row-4 {
+}
+.row-5 {
+}
+.row-5 .zero {
+  flex: 1 0 70%;
+}
