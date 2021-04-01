@@ -6,7 +6,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
 body {
   background: #eeeeee;
   background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%);
@@ -25,26 +24,25 @@ body {
   width: 420px;
   border: 1px solid black;
 }
-button {
-  display: inline-block;
-  border: 1.5px solid black;
-  font-size: 30px;
-  padding: 2rem;
-}
 .calc-screen {
   padding: 1em 0.2em;
   background-color: black;
   color: white;
   font-size: 40px;
+  overflow-x: auto;
 }
 .calc-screen div {
   text-align: end;
 }
-[class*="row"] {
-  display: flex;
-}
-[class*="row"] button {
+button {
+  display: inline-block;
+  border: 1.5px solid black;
+  font-size: 30px;
+  padding: 2rem;
   flex: 1 0 20%;
+}
+.row {
+  display: flex;
 }
 .row .cancel {
   flex: 1 0 45%;
