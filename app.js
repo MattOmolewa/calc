@@ -21,8 +21,8 @@ function handleSymbol(symbol) {
       break;
     case "+":
     case "-":
-    case "&divide;":
-    case "&times;":
+    case "÷":
+    case "×":
       handleMath(symbol);
       break;
   }
@@ -32,8 +32,10 @@ function flushOperator(intBuffer) {
     runningTotal += intBuffer;
   } else if (previousOperator === "-") {
     runningTotal -= intBuffer;
-  } else if (previousOperator === "&times;") {
+  } else if (previousOperator === "×") {
     runningTotal *= intBuffer;
+  } else {
+    runningTotal /= intBuffer;
   }
 }
 
@@ -42,7 +44,6 @@ function handleMath(symbol) {
     //do nothing
     return;
   }
-
   const intBuffer = parseInt(buffer);
 
   if (runningTotal === 0) {
